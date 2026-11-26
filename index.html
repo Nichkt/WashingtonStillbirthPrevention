@@ -5,498 +5,341 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Washington Stillbirth Prevention</title>
 <meta name="description" content="A citizen campaign asking Washington State to launch a statewide fetal movement awareness program modeled on Count the Kicks.">
+<link rel="canonical" href="https://washingtonstillbirthprevention.org/">
+<link rel="alternate" hreflang="en" href="https://washingtonstillbirthprevention.org/">
+<link rel="alternate" hreflang="es" href="https://washingtonstillbirthprevention.org/es/">
+<link rel="alternate" hreflang="x-default" href="https://washingtonstillbirthprevention.org/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Washington Stillbirth Prevention">
+<meta property="og:title" content="Washington should teach every pregnant parent to track their baby's movements">
+<meta property="og:description" content="Iowa's stillbirth rate fell 32% in the first ten years of Count the Kicks. Ask Washington to bring it to every family.">
+<meta property="og:url" content="https://washingtonstillbirthprevention.org/">
+<meta property="og:image" content="https://washingtonstillbirthprevention.org/assets/share.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Washington Stillbirth Prevention: teach every pregnant parent to track their baby's movements.">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#b5341f">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-/* VOICE: tender and steady, written by a parent for parents and lawmakers
-   IDEA: the paper kick-count chart a nurse hands you at 28 weeks
-   PICTURE: a live tally card, ten movements landing on a two-hour timeline
-   COLOUR and TYPE: blush field, deep ink, one coral accent; Fraunces titles, Source Sans body
-   LAYOUT: poster hero with the chart card, then calm bands, nav to footer */
-:root{color-scheme:light dark;
---bg:light-dark(#ffffff,#151821);--ink:light-dark(#1d2433,#eef0f5);--soft:light-dark(#4b5466,#b7bdcb);
---blush:light-dark(#f7ddd6,#2a2230);--card:light-dark(#ffffff,#1d2130);--line:light-dark(#e6d3cd,#3a3446);
---coral:light-dark(#d9472f,#ff7a63);--deep:light-dark(#1d2433,#0e1017)}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
-*{box-sizing:border-box;min-width:0}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Source Sans 3",system-ui,sans-serif;overflow-x:clip}
-h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.08;text-wrap:balance;margin:0 0 .5em}
-h1{font-size:clamp(34px,5vw,52px)}h2{font-size:clamp(28px,3.6vw,38px)}h3{font-size:21px;line-height:1.2}
-p{margin:0 0 1em;max-width:68ch}a{color:var(--coral)}
-.wrap{max-width:1240px;margin:0 auto}
-.band{padding:clamp(36px,5vw,72px) max(5vw,16px)}
-nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:20px;padding:12px max(5vw,16px);flex-wrap:wrap}
-.brand{font-family:Fraunces,Georgia,serif;font-size:20px;color:var(--ink);text-decoration:none;margin-right:auto}
-.links{display:flex;gap:18px;overflow-x:auto}.links a{color:var(--soft);text-decoration:none;font-weight:600;font-size:15px;flex:none}
-.links a:hover{color:var(--coral)}
-.hero{background:var(--blush)}
-.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
-.lede{font-size:19px;color:var(--soft)}
-.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
-.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 20px;border-radius:999px;font:600 16px "Source Sans 3",sans-serif;text-decoration:none;border:2px solid var(--ink);color:var(--ink);background:transparent;cursor:pointer}
-.btn.main{background:var(--coral);border-color:var(--coral);color:#fff}
-.btn:focus-visible,input:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
-.chart{background:var(--card);border-radius:18px;padding:22px;box-shadow:0 20px 50px -24px rgba(60,20,20,.35);border:1px solid var(--line)}
-.chart .top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:var(--soft)}
-.chart .big{font-family:Fraunces,Georgia,serif;font-size:clamp(30px,4vw,44px);line-height:1.05;margin:6px 0 2px}
-.fig{position:relative;height:150px;margin:14px 0 8px}.fig svg{position:absolute;inset:0;width:100%;height:100%}
-.week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;margin-top:10px}
-.week div{background:var(--blush);border-radius:8px;padding:6px 4px;text-align:center;font-size:13px}
-.week b{display:block;font-size:15px}
-.note{font-size:14px;color:var(--soft);margin-top:12px}
-.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:24px}
-.panel{border-top:3px solid var(--ink);padding-top:16px}
-.time{list-style:none;padding:0;margin:24px 0 0;border-left:2px solid var(--line)}
-.time li{position:relative;padding:0 0 22px 26px}
-.time li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--coral)}
-.time .d{font-weight:700;white-space:nowrap}
-.deep{background:var(--deep);color:#eef0f5}.deep p{color:#c9cedb}.deep a{color:#ff9a87}
-.stat{font-family:Fraunces,Georgia,serif;font-size:clamp(40px,6vw,64px);line-height:1;color:#ff9a87;margin-bottom:8px}
-.caveat{margin-top:28px;padding:18px 20px;border-radius:12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14)}
-.steps{counter-reset:s;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:24px}
-.step{background:var(--blush);border-radius:16px;padding:22px}
-.letter{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;white-space:pre-wrap;font-size:16px;max-height:340px;overflow:auto}
-form{display:grid;gap:12px;max-width:620px}
-label{font-weight:600;font-size:15px}
-input,textarea{width:100%;font:16px "Source Sans 3",sans-serif;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
-textarea{min-height:130px;resize:vertical}
-.out{display:none;background:var(--blush);border-radius:12px;padding:16px;font-size:15px}
-.out.on{display:block}
-details{border-bottom:1px solid var(--line);padding:14px 0}
-summary{cursor:pointer;font-weight:700;font-size:18px;min-height:30px}
-details p{margin-top:10px}
-.bars{display:grid;gap:10px;margin:14px 0}
-.bar{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr) 3.4em;gap:10px;align-items:center;font-size:15px}
-.bar .t{height:14px;border-radius:7px;background:var(--line)}
-.bar .t i{display:block;height:100%;border-radius:7px;background:var(--soft)}
-.bar.hi{font-weight:700}.bar.hi .t i{background:var(--coral)}
-.bar .v{text-align:right;white-space:nowrap}
-@media(max-width:520px){.bar{grid-template-columns:minmax(0,8em) minmax(0,1fr) 3em;font-size:13px}}
-.lookup{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;margin-top:32px;max-width:720px}
-.lookup form{max-width:none}
-.leg{display:grid;gap:8px;margin-top:14px}
-.leg div{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:10px 14px;border-radius:10px;background:var(--blush)}
-.leg span{color:var(--soft);font-size:15px}
-.lerr{margin-top:12px;color:var(--coral);font-weight:600}
-.wk{position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;height:160px;margin:18px 0 0;padding-bottom:22px;border-bottom:1px solid var(--line)}
-.wk .col{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%;z-index:1}
-.wk .col i{position:relative;display:block;width:70%;max-width:34px;border-radius:6px 6px 0 0;background:color-mix(in srgb,var(--soft) 55%,transparent)}
-.wk .col i.now{background:var(--coral)}
-.wk .col b{position:absolute;top:-19px;left:50%;transform:translateX(-50%);font-size:13px}
-.wk .col span{position:absolute;bottom:-22px;font-size:13px;color:var(--soft)}
-.wk .rng{position:absolute;left:0;right:0;background:color-mix(in srgb,var(--coral) 14%,transparent);border-top:1px dashed var(--coral);border-bottom:1px dashed var(--coral)}
-.wk .rng span{position:absolute;left:4px;top:2px;font-size:12px;color:var(--coral);font-weight:600}
-.kc{width:100%;border-collapse:collapse;margin-top:10px;font-size:15px}
-.kc th{text-align:left;font-weight:600;color:var(--soft);font-size:13px;padding:4px 8px;border-bottom:1px solid var(--line)}
-.kc td{padding:5px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
-.kc th:last-child,.kc td:last-child{text-align:right}
-.kc tr.today td{font-weight:700;color:var(--coral)}
-.how{counter-reset:h;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:24px}
-.how .st{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 20px 20px 64px;position:relative}
-.how .st::before{counter-increment:h;content:counter(h);position:absolute;left:18px;top:18px;width:32px;height:32px;border-radius:50%;background:var(--coral);color:#fff;font-weight:700;display:grid;place-items:center}
-.how .st p{margin:0}
-.counter{margin-top:36px;background:var(--blush);border-radius:18px;padding:24px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:center}
-.tap{width:100%;min-height:150px;border-radius:20px;border:0;background:var(--coral);color:#fff;font:700 22px "Source Sans 3",sans-serif;cursor:pointer}
-.tap:disabled{opacity:.45;cursor:default}
-.ctr-n{font-family:Fraunces,Georgia,serif;font-size:56px;line-height:1}
-.hist{list-style:none;padding:0;margin:10px 0 0;font-size:15px}
-.hist li{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--line)}
-.call{margin-top:32px;background:var(--coral);color:#fff;border-radius:18px;padding:24px}
-.call p,.call li{color:#fff}.call h3{color:#fff}
-@media(max-width:820px){.how,.counter{grid-template-columns:minmax(0,1fr)}}
-.alert{background:var(--coral);color:#fff;padding:14px max(5vw,16px);font-weight:600;text-align:center}
-footer{background:var(--deep);color:#c9cedb;font-size:15px}
-footer p{max-width:90ch}
-@media(max-width:820px){.hero .wrap,.grid2,.steps{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:520px){.week div{font-size:11px}.week b{font-size:13px}.links{width:100%}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.dot{animation:none!important;opacity:1!important}}
-@keyframes pop{from{opacity:0;transform:scale(.3)}to{opacity:1;transform:scale(1)}}
-.dot{transform-box:fill-box;transform-origin:center;opacity:0;animation:pop .45s ease-out forwards}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&amp;family=Source+Sans+3:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css?v=2">
+<script>document.documentElement.classList.add('js')</script>
+<script src="assets/site.js?v=2" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to main content</a>
 
-<div class="alert">If your baby is moving less than usual, call your provider or go to labor and delivery today.</div>
+<section class="alert" aria-label="Health warning"><p>If your baby is moving less than usual, call your provider or go to labor and delivery today. <a href="#how">How to count kicks</a></p></section>
 
-<nav><div class="wrap">
+<nav aria-label="Main"><div class="wrap">
 <a class="brand" href="#top">Washington Stillbirth Prevention</a>
-<div class="links">
-<a href="#evidence">Evidence</a><a href="#ask">The ask</a><a href="#placenta">Placenta</a><a href="#status">Where it stands</a><a href="#now">Act now</a><a href="#help">Help</a><a href="#faq">FAQ</a><a href="#how">How to count</a>
+<a class="lang" href="es/" hreflang="es" lang="es">Español</a>
+<button class="menu" id="menu" type="button" aria-expanded="false" aria-controls="links"><span class="bars-i" aria-hidden="true"></span>Menu</button>
+<div class="links" id="links">
+<a href="#evidence">Evidence</a><a href="#ask">The ask</a><a href="#support">Support</a><a href="#placenta">Placenta</a><a href="#status">Where it stands</a><a href="#now">Act now</a><a href="#help">Help</a><a href="#faq">FAQ</a><a href="#how">How to count</a>
 </div></div></nav>
 
-<header class="hero band" id="top"><div class="wrap">
+<main id="main" tabindex="-1">
+<section class="hero blush band" id="top" aria-labelledby="h-top"><div class="wrap">
 <div>
-<h1>Washington should teach every pregnant parent to track their baby's movements</h1>
-<p class="lede">About 1 in 175 U.S. pregnancies ends in stillbirth. Around a quarter of those babies die because the placenta stops delivering enough oxygen, and a baby in that situation often moves less for a few days first. Iowa and Norway started telling parents to keep track of movement and call when it drops. We want Washington to do the same thing statewide.</p>
-<div class="btns"><a class="btn main" href="#help">Write your legislator</a><a class="btn" href="#story">Share your story</a></div>
+<h1 id="h-top">Washington should teach every pregnant parent to track their baby's movements</h1>
+<p class="lede">About 1 in 175 U.S. births is a stillbirth. Around a quarter of those babies die because the placenta stops delivering enough oxygen, and a baby in that situation often moves less in the days or weeks before. Iowa and Norway started telling parents to keep track of movement and call when it drops. We want Washington to do the same thing statewide.</p>
+<div class="btns"><a class="btn main" href="#help">Write your legislator</a><a class="btn" href="#how">How to count kicks</a><a class="btn" href="#story">Share your story</a></div>
 </div>
-<div class="chart" aria-label="Example of a daily kick count">
-<div class="top"><span>Kick chart, week 33</span><span>Counted at 8:00 pm each night</span></div>
-<div class="big"><span id="mins">23</span> minutes to 10 movements</div>
-<div class="wk" id="wk" role="img" aria-label="Minutes to 10 movements each day this week, all close to the usual 23 minutes"></div>
+<figure class="chart">
+<figcaption class="top"><span><span class="tag">Example</span>Kick chart, week 33</span><span>Counted at about 8 pm each night</span></figcaption>
+<p class="big">23 minutes to 10 movements</p>
+<div class="wk" id="wk" aria-hidden="true"></div>
 <p class="note" style="margin:8px 0 0">Minutes to 10 movements each night. The shaded band is this baby's usual range, 18 to 28 minutes. A night well above it is a reason to call.</p>
-<table class="kc"><thead><tr><th>Day</th><th>Started</th><th>Time to 10</th></tr></thead><tbody id="week"></tbody></table>
-</div>
-</div></header>
+<table class="kc">
+<caption class="sr-only">An example week of kick counts</caption>
+<thead><tr><th scope="col">Day</th><th scope="col">Started</th><th scope="col">Time to 10</th></tr></thead>
+<tbody id="week">
+<tr data-min="21"><td>Mon</td><td>8:02 pm</td><td>21 min</td></tr>
+<tr data-min="26"><td>Tue</td><td>8:00 pm</td><td>26 min</td></tr>
+<tr data-min="19"><td>Wed</td><td>8:05 pm</td><td>19 min</td></tr>
+<tr data-min="24"><td>Thu</td><td>8:01 pm</td><td>24 min</td></tr>
+<tr data-min="22"><td>Fri</td><td>8:03 pm</td><td>22 min</td></tr>
+<tr data-min="28"><td>Sat</td><td>8:00 pm</td><td>28 min</td></tr>
+<tr data-min="23" class="today"><td>Sun</td><td>8:04 pm</td><td>23 min</td></tr>
+</tbody></table>
+</figure>
+</div></section>
 
-<section class="band deep" id="evidence"><div class="wrap">
-<h2>What happened in Iowa and Norway</h2>
+<section class="band deep" id="evidence" aria-labelledby="h-evidence"><div class="wrap">
+<h2 id="h-evidence">What happened in Iowa and Norway</h2>
 <div class="grid2">
-<div><div class="stat">32%</div><p>Iowa's stillbirth rate fell 32% in the first ten years of Count the Kicks. The national rate barely moved over the same period. Iowa had 231 stillbirths in 2008, the year the program started.</p></div>
-<div><div class="stat">About half</div><p>Fourteen hospitals in Norway gave every pregnant woman the same handout on fetal movement and gave staff guidelines for what to do when someone reported less of it. Among women who came in with reduced movement, stillbirths dropped from 4.2% to 2.4%. The number of those visits didn't go up.</p></div>
+<div><p class="stat">32%</p><p>Iowa's stillbirth rate fell 32% in the first ten years of Count the Kicks. The national rate barely moved over the same period, and a 2023 study found no similar drop in neighboring Illinois, Minnesota or Missouri. Iowa had 231 stillbirths in 2008, the year the program started, and 148 in 2018.</p></div>
+<div><p class="stat">One-third</p><p>Fourteen hospitals in Norway gave every pregnant woman the same handout on fetal movement and gave staff guidelines for what to do when someone reported less of it. Their stillbirth rate fell by about a third, from 3.0 to 2.0 per 1,000 births. Among women who came in with reduced movement, stillbirths dropped 43%, from 4.2% to 2.4%. The number of those visits didn't go up.</p></div>
 </div>
 <div class="caveat">
 <h3>What that could mean for Washington</h3>
-<div class="stat" style="font-size:clamp(30px,4.2vw,46px);line-height:1.1">1,200 families over the next 10 years saved from tragedy</div>
+<p class="stat mid">1,200 families over the next 10 years saved from tragedy</p>
 <p>Washington loses about 360 to 440 babies to stillbirth each year. If we matched Iowa's 32% drop, that would mean roughly 115 to 140 more babies coming home every year, or about 1,200 families over a decade.</p>
-<p style="font-size:14px">Based on Washington Department of Health vital statistics: 363 fetal deaths in 2024 and 437 in an earlier year. Fetal deaths are losses at 20 weeks or later. This is an estimate, and Washington's own results would depend on how the program is run.</p>
+<p class="small">Based on Washington Department of Health <a href="https://doh.wa.gov/data-and-statistical-reports/washington-tracking-network-wtn/fetal-and-infant-death-data/fetal-deaths">fetal death data</a>: from 2015 to 2024, Washington recorded between 363 (2024) and 441 (2016) fetal deaths a year. Fetal deaths are losses at 20 weeks or later. This is an estimate, and Washington's own results would depend on how the program is run.</p>
 </div>
 </div></section>
 
-<section class="band" id="ask"><div class="wrap">
-<h2>What we want the state to do</h2>
-<p>Count the Kicks was started in 2008 by five Iowa mothers who had lost babies. It gives clinics free printed materials and gives parents a free app for tracking movement in the third trimester. Washington providers can already order the materials, but the state doesn't run a program to get them into every clinic. We're asking for two things.</p>
+<section class="band" id="ask" aria-labelledby="h-ask"><div class="wrap">
+<h2 id="h-ask">What we want the state to do</h2>
+<p>Count the Kicks was started in 2008 by five Iowa mothers who had lost babies. It gives clinics free printed materials and gives parents a free app for tracking movement in the third trimester. Washington providers can already order free materials, but the state doesn't run a program to get them into every clinic. We're asking for two things.</p>
 <div class="grid2">
 <div class="panel"><h3>1. The Department of Health partners now</h3>
-<p>A federal law passed in 2024 lets states spend their Title V maternal and child health grant on stillbirth prevention. The Department of Health could join Count the Kicks and get materials into prenatal clinics, birth centers, WIC offices and tribal clinics. No new state law is needed for this. Kansas budgeted about $9,000 a year when it did it.</p></div>
+<p>The Department of Health gets a federal Title V Maternal and Child Health Block Grant every year. A federal law passed in 2024 says states can spend it on stillbirth prevention, and it names tracking and awareness of fetal movements. The Department could partner with Count the Kicks and get materials into prenatal clinics, birth centers, WIC offices and tribal clinics. No new state law is needed. Kansas's health department announced this kind of partnership in October 2024.</p>
+<p>The 2024 law didn't come with new money, and much of the grant already pays for other work, including local health departments. Stillbirth prevention will only make the list if people ask for it. <a href="#titlev">Here's how to ask.</a></p></div>
 <div class="panel"><h3>2. The Legislature passes a law in 2027</h3>
 <p>A law keeps the program going when budgets get tight. We'd like a 2027 bill that funds it, gives providers guidance on what to do when a parent reports less movement, pays for translated materials, and has DOH report stillbirth rates by county and by race and ethnicity every year.</p></div>
 </div>
+<div class="titlev" id="titlev">
+<h3>Ask the Department of Health to use Title V for stillbirth prevention</h3>
+<p>The Department of Health takes public comments on its Title V Maternal and Child Health Block Grant by email. Its priorities for 2025 to 2030 include prenatal care, postpartum visits, breastfeeding and home visiting, but they don't mention stillbirth. A short email asking the Department to add stillbirth prevention and partner with Count the Kicks takes five minutes.</p>
+<div class="btns"><a class="btn main" id="tvmail" href="mailto:MCHBGPublicComment@doh.wa.gov?subject=Title%20V%20comment%3A%20stillbirth%20prevention">Email a comment to DOH</a><a class="btn" href="https://doh.wa.gov/public-health-provider-resources/public-health-system-resources-and-services/local-health-resources-and-tools/maternal-and-child-health-block-grant">Read about the grant</a></div>
+<p class="note">The button opens a draft addressed to <a href="mailto:MCHBGPublicComment@doh.wa.gov">MCHBGPublicComment@doh.wa.gov</a>. Add a sentence about why this matters to you before you send it.</p>
+</div>
 </div></section>
 
-<section class="band" id="placenta"><div class="wrap">
-<h2>About a quarter of stillbirths come from placental disease</h2>
+<section class="band blush" id="support" aria-labelledby="h-support"><div class="wrap">
+<h2 id="h-support">Washington isn't starting from zero</h2>
+<p>Count the Kicks already has a foothold here. What's missing is a state program that gets it to every family.</p>
+<div class="grid3">
+<div class="card"><h3>Free materials, paid for by Amerigroup</h3><p>Since 2023, Amerigroup has paid for Count the Kicks materials so Washington providers can order them for free.</p></div>
+<div class="card"><h3>Thurston County is a partner</h3><p>Thurston County Public Health and Social Services is a Count the Kicks partner. The state Department of Health and the Health Care Authority are not.</p></div>
+<div class="card"><h3>At least 17 states and D.C.</h3><p>Health agencies in at least 17 states and Washington, D.C., partner with Count the Kicks, including Iowa, Georgia, Michigan and Arizona.</p></div>
+</div>
+<p style="margin-top:24px">When the Senate heard SB 5501 in 2023, four people testified for it and no one testified against it.</p>
+<p class="note">Sources: Count the Kicks <a href="https://countthekicks.org/statistics/wa/">Washington page</a> and <a href="https://countthekicks.org/about-us/partners/">partner list</a>.</p>
+</div></section>
+
+<section class="band" id="placenta" aria-labelledby="h-placenta"><div class="wrap">
+<h2 id="h-placenta">About a quarter of stillbirths come from placental disease</h2>
 <div class="grid2">
 <div>
-<div class="stat" style="color:var(--coral)">23.6%</div>
-<p>The National Institutes of Health ran the largest U.S. study on what causes stillbirth. Placental disease caused 23.6% of the stillbirths in it. Among babies who died before labor started, it was 26%, more than any other cause. If you add other pregnancy complications, the total comes to about half.</p>
-<p>A failing placenta sends the baby less oxygen and food, and the baby slows down to save energy. Researchers who examined placentas from pregnancies where the mother noticed less movement found they were smaller and had more damage than normal. In many stillbirths, the baby moved less for three or four days beforehand.</p>
-<p>Those few days matter. If a parent notices and calls, the hospital can monitor the baby's heart rate and do an ultrasound the same day. If the placenta is failing, doctors can deliver the baby.</p>
+<p class="stat coral">23.6%</p>
+<p>The National Institutes of Health ran the largest U.S. study on what causes stillbirth. Placental disease was a cause in 23.6% of the stillbirths it fully evaluated. Among babies who died before labor started, it was 26%, more than any other cause.</p>
+<p>A failing placenta sends the baby less oxygen and food, and the baby slows down to save energy. Researchers who examined placentas from pregnancies where the mother noticed less movement found they were smaller and had more damage than normal. In many stillbirths, the baby moved less in the days or weeks beforehand.</p>
+<p>That window matters. If a parent notices and calls, the hospital can monitor the baby's heart rate and do an ultrasound the same day. If the placenta is failing, doctors can deliver the baby.</p>
 </div>
 <div>
-<h3>Causes of U.S. stillbirth</h3>
-<div class="bars" id="bars" role="img" aria-label="Bar chart of stillbirth causes from the NIH Stillbirth Collaborative Research Network"></div>
-<p class="note">Share of 512 stillbirths with a probable or possible cause, NIH Stillbirth Collaborative Research Network, JAMA 2011. Some had more than one cause. Other studies have put placental causes as low as 11% and as high as 65%, depending on how they sort cases.</p>
-<p class="note">A UK study of 301 stillbirths found that in nearly half, the mother had noticed less movement or none. Those cases were about 2.8 times as likely to involve a failing placenta.</p>
+<h3 id="h-causes">Causes of U.S. stillbirth</h3>
+<ul class="bars" role="list" aria-labelledby="h-causes">
+<li class="bar"><span>Obstetric complications</span><span class="t" aria-hidden="true"><i style="width:97.67%"></i></span><span class="v">29.3%</span></li>
+<li class="bar hi"><span>Placental disease</span><span class="t" aria-hidden="true"><i style="width:78.67%"></i></span><span class="v">23.6%</span></li>
+<li class="bar"><span>Genetic or structural</span><span class="t" aria-hidden="true"><i style="width:45.67%"></i></span><span class="v">13.7%</span></li>
+<li class="bar"><span>Infection</span><span class="t" aria-hidden="true"><i style="width:43%"></i></span><span class="v">12.9%</span></li>
+<li class="bar"><span>Umbilical cord</span><span class="t" aria-hidden="true"><i style="width:34.67%"></i></span><span class="v">10.4%</span></li>
+<li class="bar"><span>High blood pressure</span><span class="t" aria-hidden="true"><i style="width:30.67%"></i></span><span class="v">9.2%</span></li>
+<li class="bar"><span>Maternal medical</span><span class="t" aria-hidden="true"><i style="width:26%"></i></span><span class="v">7.8%</span></li>
+</ul>
+<p class="note">Percent of all 512 fully evaluated stillbirths with each probable or possible cause, NIH Stillbirth Collaborative Research Network, JAMA 2011. A cause was found for 76% of them, and some had more than one. Other studies have put placental causes as low as 11% and as high as 65%, depending on how they sort cases.</p>
+<p class="note">A UK study of 301 stillbirths found that in nearly half, the mother had noticed less movement or none before the stillbirth was found. When she had noticed less movement, the odds of a failing placenta were about 2.8 times higher.</p>
 </div>
 </div>
 </div></section>
 
-<section class="band" id="status" style="background:var(--blush)"><div class="wrap">
-<h2>Washington looked at this in 2023</h2>
-<p><a href="https://app.leg.wa.gov/billsummary?BillNumber=5501&amp;Year=2023&amp;Initiative=false">Senate Bill 5501 from the 2023-24 session</a> would have set up a state Count the Kicks program through the Health Care Authority. Nobody testified against it at its hearing. It went to the Senate Ways &amp; Means Committee without any money attached and never came out. Two of its four sponsors are no longer in the Senate, so we need new legislators to pick it up.</p>
+<section class="band blush" id="status" aria-labelledby="h-status"><div class="wrap">
+<h2 id="h-status">Washington looked at this in 2023</h2>
+<p><a href="https://app.leg.wa.gov/billsummary?BillNumber=5501&amp;Year=2023&amp;Initiative=false">Senate Bill 5501 from the 2023-24 session</a> would have set up a state Count the Kicks program through the Health Care Authority. Nobody testified against it at its hearing. The Health &amp; Long Term Care Committee passed it, but the Ways &amp; Means Committee never gave it a hearing. Its <a href="https://fnspublic.ofm.wa.gov/FNSPublicSearch/GetPDF?packageID=66594">fiscal note</a> estimated $683,000 for the first two years, mostly for the Health Care Authority, and $100,000 every two years after that.</p>
+<p>Of its four sponsors, only Sen. Claire Wilson will still be in the Senate in 2027, so the bill needs new champions.</p>
 <ol class="time">
-<li><span class="d">Jan 2023</span>: <a href="https://app.leg.wa.gov/billsummary?BillNumber=5501&amp;Year=2023&amp;Initiative=false">SB 5501 (2023-24)</a> introduced by Senators Keiser, Randall, Saldaña and C. Wilson.</li>
-<li><span class="d">Feb 7, 2023</span>: Hearing in Senate Health &amp; Long Term Care. No one testified against it.</li>
-<li><span class="d">2023 to 2024</span>: Bill sits in Ways &amp; Means until it expires.</li>
-<li><span class="d">July 2024</span>: Federal Maternal and Child Health Stillbirth Prevention Act becomes law. States can now use Title V money for this.</li>
+<li><span class="d">Jan 2023</span>: SB 5501 introduced by Senators Keiser, Randall, Saldaña and C. Wilson.</li>
+<li><span class="d">Feb 7, 2023</span>: Hearing in Senate Health &amp; Long Term Care. Four people testified for it and no one testified against it.</li>
+<li><span class="d">Feb 16, 2023</span>: The committee passes it and sends it to Ways &amp; Means.</li>
+<li><span class="d">2023 to 2024</span>: No hearing in Ways &amp; Means. The bill dies when the 2024 session ends on March 7.</li>
+<li><span class="d">July 2024</span>: The federal Maternal and Child Health Stillbirth Prevention Act becomes law. States can now use Title V money for this.</li>
 </ol>
 <div class="panel" style="margin-top:28px">
 <h3>Who let this bill die</h3>
-<p>SB 5501 (2023-24) was sent to the Senate Ways &amp; Means Committee and never got a hearing. Sen. Christine Rolfes chaired the committee in 2023, and Sen. June Robinson has chaired it since 2024. Committee chairs decide which bills are heard. Washington has lost hundreds of babies to stillbirth every year since.</p>
-<p>Sen. Robinson still chairs Ways &amp; Means. Ask her to give a Count the Kicks bill a hearing in 2027. You can find her contact information in the Legislature's <a href="https://app.leg.wa.gov/ContentParts/MemberDirectory/?a=Senate">Senate member directory</a>.</p>
+<p>SB 5501 (2023-24) was sent to the Senate Ways &amp; Means Committee and never got a hearing. Sen. Christine Rolfes chaired the committee until she left the Senate in mid-2023, and Sen. June Robinson has chaired it since September 2023. Committee chairs decide which bills are heard. Washington has lost hundreds of babies to stillbirth every year since.</p>
+<p>Sen. Robinson is set to chair Ways &amp; Means again in 2027. Ask her to give a Count the Kicks bill a hearing. Sen. Claire Wilson, the one sponsor still in the Senate, will also sit on Ways &amp; Means. Ask her to bring the bill back.</p>
+<div class="contacts">
+<div class="card"><p><b>Sen. June Robinson</b> (D), 38th District<br>Chair, Ways &amp; Means<br><a href="mailto:june.robinson@leg.wa.gov">june.robinson@leg.wa.gov</a><br><a href="tel:+13607867674">(360) 786-7674</a></p></div>
+<div class="card"><p><b>Sen. Claire Wilson</b> (D), 30th District<br>SB 5501 sponsor<br><a href="mailto:claire.wilson@leg.wa.gov">claire.wilson@leg.wa.gov</a><br><a href="tel:+13607867658">(360) 786-7658</a></p></div>
+</div>
+<p>You can find every legislator in the Legislature's <a href="https://leg.wa.gov/legislators/">member directory</a>.</p>
 </div>
 </div></section>
 
-<section class="band" id="now"><div class="wrap">
-<h2>What we can do now</h2>
+<section class="band" id="now" aria-labelledby="h-now"><div class="wrap">
+<h2 id="h-now">What we can do now</h2>
 <p>The next chance to pass a law is the 2027 session. The work that decides whether a bill moves happens before it starts.</p>
 <ol class="time">
-<li><span class="d">Now</span>: Ask your senator and representatives to sponsor a Count the Kicks bill. Ask the Department of Health to use its federal Title V money for a statewide program, which doesn't need a vote.</li>
-<li><span class="d">December 2026</span>: Bill prefiling opens. A bill filed early has more time to get a hearing and a cost estimate.</li>
+<li><span class="d">Now</span>: Ask your senator and representatives to sponsor a Count the Kicks bill. <a href="#titlev">Ask the Department of Health</a> to use its federal Title V money for a statewide program, which doesn't need a vote.</li>
+<li><span class="d">December 7, 2026</span>: Bill prefiling opens. Legislators, including newly elected members, can file bills before the session starts. A bill filed early has more time to get a hearing and a cost estimate.</li>
 <li><span class="d">January 11, 2027</span>: The session starts. This is a 105-day session, and lawmakers write the next two-year budget, so it's the best time to get money for the program.</li>
-<li><span class="d">January to February 2027</span>: Committee hearings. Parents and providers can testify in Olympia or online.</li>
-<li><span class="d">April 26, 2027</span>: Last day of the session. Anything not passed by then has to start over.</li>
+<li><span class="d">February 19 and 26, 2027</span>: Last days for bills to pass policy committees (February 19) and budget committees like Ways &amp; Means (February 26). Parents and providers can testify in Olympia or remotely.</li>
+<li><span class="d">March 10, 2027</span>: Last day for bills to pass the chamber where they started.</li>
+<li><span class="d">April 14, 2027</span>: Last day to pass the other chamber.</li>
+<li><span class="d">April 25, 2027</span>: Last day of the session. Bills that don't pass stay alive for the 2028 session, but the two-year budget is written in 2027.</li>
 </ol>
+<p class="note">Dates after January 11 come from the Legislature's <a href="https://leg.wa.gov/media/zbwkvfyi/draft-2027-cutoff-calendar-draft.pdf">draft 2027 cutoff calendar</a> and could change.</p>
 <div class="btns"><a class="btn main" href="#help">See how to help</a></div>
 </div></section>
 
-
-<section class="band" id="help"><div class="wrap">
-<h2>How to help</h2>
+<section class="band" id="help" aria-labelledby="h-help"><div class="wrap">
+<h2 id="h-help">How to help</h2>
 <div class="steps">
-<div class="step"><h3>Email your legislators</h3><p>Look up your senator and both representatives below, then write to all of them. A few sentences in your own words get more attention than a form letter.</p></div>
-<div class="step"><h3>Ask them to sponsor a bill</h3><p>Legislators can start filing bills in December. Ask yours to introduce a Count the Kicks bill or to sign on to one.</p></div>
+<div class="step"><h3>Email your legislators</h3><p>Look up your senator and representatives below, then write to all of them. A few sentences in your own words get more attention than a form letter.</p></div>
+<div class="step"><h3>Ask them to sponsor a bill</h3><p>Legislators can start filing bills on December 7. Ask yours to introduce a Count the Kicks bill or to sign on to one.</p></div>
+<div class="step"><h3>Email the Department of Health</h3><p>Ask the Department to use its Title V grant for a statewide Count the Kicks partnership. <a href="#titlev">We drafted the email for you.</a></p></div>
 <div class="step"><h3>Talk to your provider</h3><p>Ask your OB or midwife if they give out information on tracking movement. They can order free materials at <a href="https://countthekicks.org/order-materials/">countthekicks.org</a>.</p></div>
-<div class="step"><h3>Testify in January</h3><p>Anyone can testify when a bill gets a hearing, either in Olympia or online through the Legislature's website. We'll post the date here once it's set.</p></div>
+<div class="step"><h3>Testify when there's a hearing</h3><p>Anyone can testify in Olympia or remotely once a bill is on a committee agenda. <a href="#alerts">Get an email</a> when that happens.</p></div>
+<div class="step"><h3>Put up a flyer</h3><p>Print our <a href="flyer.html">one-page flyer</a> for a clinic, library, WIC office or community board. Its QR code links back here.</p></div>
 </div>
 
-<div class="lookup" id="lookup">
+<div class="box" id="lookup">
 <h3>Find your legislators</h3>
 <form id="lform">
 <div><label for="addr">Your home address</label><input id="addr" autocomplete="street-address" placeholder="123 Main St, Bellevue, WA 98004" required></div>
-<div><button class="btn main" type="submit" id="lbtn">Look up</button></div>
+<div><button class="btn main" type="submit">Look up</button></div>
 </form>
+<div class="row"><label for="dsel">Or choose your district number</label><select id="dsel"><option value="">District</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option><option>13</option><option>14</option><option>15</option><option>16</option><option>17</option><option>18</option><option>19</option><option>20</option><option>21</option><option>22</option><option>23</option><option>24</option><option>25</option><option>26</option><option>27</option><option>28</option><option>29</option><option>30</option><option>31</option><option>32</option><option>33</option><option>34</option><option>35</option><option>36</option><option>37</option><option>38</option><option>39</option><option>40</option><option>41</option><option>42</option><option>43</option><option>44</option><option>45</option><option>46</option><option>47</option><option>48</option><option>49</option></select></div>
 <div id="lres" aria-live="polite"></div>
-<p class="note">Your address is sent to the U.S. Census Bureau's geocoder to find your district. We don't store it. Names are from the 2025-26 Legislature; members elected in November 2026 take office January 11, 2027.</p>
+<p class="note">Your address is sent to the U.S. Census Bureau's geocoder to find your district. We don't store it. Not sure of your district? Use the Legislature's <a href="https://app.leg.wa.gov/districtfinder/">District Finder</a>. Names are from the 2025-26 Legislature; members elected in November 2026 take office January 11, 2027.</p>
 </div>
 
-<h3 style="margin-top:40px">Sample letter</h3>
-<div class="letter" id="letter">Dear Senator / Representative ____,
+<h3 class="gap" id="h-letter">Sample letter</h3>
+<p>Edit it to make it yours. After you look up your legislators, "Email my legislators" fills in their names and opens the letter in your email app.</p>
+<textarea class="letter" id="letter" aria-labelledby="h-letter">Dear Senator ____ and Representatives ____,
 
-I live in ____ in your district. Please sponsor or support a Count the Kicks bill in the 2027 session.
+I live in [your city or town], in your district. Please sponsor or co-sponsor a Count the Kicks bill in the 2027 session, and help fund it in the budget.
 
-Count the Kicks teaches pregnant parents to learn how their baby normally moves in the third trimester and to call their provider if that changes. About a quarter of U.S. stillbirths are caused by placental disease. Those babies often move less for several days before they die, which gives doctors time to check and deliver. Iowa's stillbirth rate fell about 32% in the program's first ten years. Washington loses about 360 to 440 babies to stillbirth every year. If we matched Iowa's results, roughly 115 to 140 more babies would come home each year. Over the next ten years, that's about 1,200 Washington families spared the loss of a child. The Senate heard a version of this bill in 2023 (SB 5501, 2023-24 session). No one opposed it, but it never got out of Ways & Means.
+Count the Kicks teaches pregnant parents how their baby normally moves in the third trimester and to call their provider when that changes. About a quarter of U.S. stillbirths are caused by placental disease, and those babies often move less in the days or weeks before they die. That gives doctors time to check and, if needed, deliver.
 
-It doesn't cost much, and federal Title V money can pay for it.
+Iowa's stillbirth rate fell about 32% in the program's first ten years. Washington loses 360 to 440 babies to stillbirth every year. If we matched Iowa's results, roughly 115 to 140 more babies would come home each year, or about 1,200 families over ten years.
+
+The Senate considered this in 2023 as SB 5501. No one testified against it, but it never got a hearing in Ways &amp; Means.
 
 [Why this matters to you, in a sentence or two.]
 
 Thank you,
-____</div>
-<div class="btns"><button class="btn main" id="copy" type="button">Copy letter</button><span id="copied" class="note" aria-live="polite"></span></div>
+[Your name]
+[Your address]</textarea>
+<div class="btns"><button class="btn main" id="lemail" type="button">Email my legislators</button><button class="btn" id="copy" type="button">Copy letter</button></div>
+<p class="note" id="lmsg" aria-live="polite"></p>
 
-<h3 style="margin-top:40px" id="story">Share your story</h3>
+<div class="box" id="session">
+<h3>During the session, January 11 to April 25, 2027</h3>
+<ul>
+<li><b>Comment on the bill.</b> Once a bill has a number, the Legislature's <a href="https://leg.wa.gov/bills-meetings-and-session/bills/how-to-comment-on-a-bill/">bill comment form</a> sends your comment to your own legislators.</li>
+<li><b>Call the Legislative Hotline</b> at <a href="tel:+18005626000">1-800-562-6000</a> and leave a message for your legislators. If you use TTY, dial 711 first.</li>
+<li><b>Testify.</b> When the bill is on a committee agenda, <a href="https://app.leg.wa.gov/csi/">sign in to testify</a> up to an hour before the meeting. You can testify in person or over Zoom, or send written testimony until 24 hours after the meeting starts. <a href="https://leg.wa.gov/bills-meetings-and-session/session/how-to-testify-at-a-committee-meeting/">How to testify</a>.</li>
+<li><b>Follow the committees.</b> The Legislature's <a href="https://public.govdelivery.com/accounts/WALEG/subscriber/new">email updates</a> send committee agendas as they're posted.</li>
+</ul>
+</div>
+
+<div class="box" id="alerts">
+<h3>Get an email when there's a hearing</h3>
+<p>We'll email you when a Count the Kicks bill is filed and when it's scheduled for a hearing, so you can testify or call. This opens a short email to us. Nothing is sent until you press send.</p>
+<form id="aform">
+<div><label for="aem">Email</label><input id="aem" type="email" autocomplete="email" required></div>
+<div><label for="anm">Name (optional)</label><input id="anm" autocomplete="name"></div>
+<div><label for="atown">City or legislative district (optional)</label><input id="atown" autocomplete="address-level2"></div>
+<div><button class="btn main" type="submit">Sign me up</button></div>
+</form>
+<div class="out" id="aout" aria-live="polite"></div>
+</div>
+
+<h3 class="gap" id="story">Share your story</h3>
 <p>Legislators remember stories from people in their districts. If noticing movement made a difference in your pregnancy, or if you lost a baby and want other families to know about this, we'd like to hear from you. We won't share anything without asking you first.</p>
 <form id="sform">
 <div><label for="nm">Name</label><input id="nm" autocomplete="name" required></div>
 <div><label for="town">City or town</label><input id="town" autocomplete="address-level2"></div>
 <div><label for="em">Email</label><input id="em" type="email" autocomplete="email" required></div>
 <div><label for="msg">Your story</label><textarea id="msg" required></textarea></div>
-<div><button class="btn main" type="submit">Prepare my email</button></div>
+<fieldset><legend>May we share your story with legislators and the public?</legend>
+<label><input type="radio" name="share" value="name" required>Yes, with my name</label>
+<label><input type="radio" name="share" value="anon">Yes, but leave my name out</label>
+<label><input type="radio" name="share" value="none">No, it's just for you to read</label>
+</fieldset>
+<div class="btns" style="margin-top:0"><button class="btn main" type="submit">Prepare my email</button><button class="btn" type="button" id="scopy">Copy my story</button></div>
 </form>
 <div class="out" id="out" aria-live="polite"></div>
 </div></section>
 
-<section class="band" id="faq" style="background:var(--blush)"><div class="wrap">
-<h2>FAQ</h2>
+<section class="band blush" id="faq" aria-labelledby="h-faq"><div class="wrap">
+<h2 id="h-faq">FAQ</h2>
 <details><summary>Is this medical advice?</summary><p>No. Ask your provider how and when to track movement in your pregnancy, and call them if your baby is moving less.</p></details>
-<details><summary>Won't this make parents anxious?</summary><p>Doctors raised that concern in both places. In Norway, visits for reduced movement didn't increase after the handout went out, and surveys didn't find more worry among mothers.</p></details>
+<details><summary>Won't this make parents anxious?</summary><p>Doctors raised that concern. In the Norway project, visits for reduced movement didn't go up after the handout went out. In a separate Norwegian trial of about 1,000 women, those who counted movements reported slightly less worry than those who didn't, and about as many in each group were ever concerned about their baby moving less.</p></details>
 <details><summary>Don't doctors already tell people this?</summary><p>Some do. It depends on the clinic, and the advice isn't always the same. A state program would make sure everyone hears it.</p></details>
 <details><summary>Who is behind this site?</summary><p>Washington parents.</p></details>
-<details><summary>Are some families at higher risk?</summary><p>Yes. Nationally, Black families have stillbirths at more than twice the rate of white families, and the rate for Native families is also higher. We want the materials translated and handed out at WIC offices and tribal clinics as well as OB offices.</p></details>
+<details><summary>Are some families at higher risk?</summary><p>Yes. In 2024, U.S. stillbirth rates were about 10 per 1,000 births for Black families and for Native Hawaiian and Pacific Islander families, and 7.8 for American Indian and Alaska Native families, compared with 4.6 for white families. We want the materials translated and handed out at WIC offices and tribal clinics as well as OB offices.</p></details>
 </div></section>
 
-<section class="band" id="how"><div class="wrap">
-<h2>How to count your baby's kicks</h2>
+<section class="band" id="how" aria-labelledby="h-how"><div class="wrap">
+<h2 id="h-how">How to count your baby's kicks</h2>
 <p>Start counting every day at the beginning of the third trimester, around 28 weeks, or earlier if your provider tells you to. It takes most people a few minutes a day.</p>
-<div class="how">
-<div class="st"><h3>Pick a time when your baby is usually active</h3><p>Try to count at the same time every day. Many people choose the evening, or after a meal.</p></div>
-<div class="st"><h3>Get comfortable</h3><p>Sit with your feet up or lie on your side, somewhere quiet where you can pay attention to the baby.</p></div>
-<div class="st"><h3>Time how long it takes to feel 10 movements</h3><p>Kicks, rolls, jabs and swishes all count. Start a timer when you begin and stop it at the tenth movement.</p></div>
-<div class="st"><h3>Write it down and compare</h3><p>After a few days you'll see how long your baby usually takes. That pattern is what you're watching. Every baby is different, so compare your baby only to your baby.</p></div>
-</div>
+<ol class="how">
+<li class="st"><h3>Pick a time when your baby is usually active</h3><p>Try to count at the same time every day. Many people choose the evening, or after a meal.</p></li>
+<li class="st"><h3>Get comfortable</h3><p>Sit with your feet up or lie on your side, somewhere quiet where you can pay attention to the baby.</p></li>
+<li class="st"><h3>Time how long it takes to feel 10 movements</h3><p>Kicks, rolls, jabs and swishes all count. Start a timer when you begin and stop it at the tenth movement.</p></li>
+<li class="st"><h3>Write it down and compare</h3><p>After a few days you'll see how long your baby usually takes. That pattern is what you're watching. Every baby is different, so compare your baby only to your baby.</p></li>
+</ol>
 
-<div class="counter">
+<div class="counter" id="counter">
 <div>
 <h3>Try it here</h3>
 <p>Press start, then tap the button each time you feel a movement. Your times are saved only in this browser on this device.</p>
-<div class="ctr-n"><span id="cn">0</span> / 10</div>
+<p class="ctr-n"><span id="cn">0</span> / 10</p>
 <p class="note" id="ct">Not started</p>
-<div class="btns"><button class="btn" type="button" id="cstart">Start counting</button><button class="btn" type="button" id="creset">Reset</button></div>
+<div class="btns"><button class="btn" type="button" id="cstart">Start counting</button><button class="btn" type="button" id="cundo" disabled>Undo</button><button class="btn" type="button" id="creset">Reset</button></div>
+<p class="cres" id="cres" tabindex="-1"></p>
+<div class="warn" id="cwarn" role="alert"></div>
+<p class="sr-only" id="clive" aria-live="polite"></p>
+<p class="note">Prefer an app? Count the Kicks has a free one for <a href="https://apps.apple.com/us/app/count-the-kicks/id844800332">iPhone</a> and <a href="https://play.google.com/store/apps/details?id=org.healthybirthday.countthekicks">Android</a>.</p>
 </div>
 <div>
 <button class="tap" type="button" id="ctap" disabled>I felt a movement</button>
-<h3 style="margin-top:18px;font-size:18px">Your recent counts</h3>
+<h4 style="margin-top:18px">Your recent counts</h4>
 <ul class="hist" id="chist"><li><span>No counts saved yet</span></li></ul>
 <p class="note" id="cavg"></p>
+<div class="btns" style="margin-top:8px"><button class="btn small" type="button" id="cclear" disabled>Clear saved counts</button></div>
 <form id="rform" style="margin-top:16px;gap:10px">
 <div><label for="remail">Email my report to</label><input id="remail" type="email" autocomplete="email" placeholder="you@example.com" required></div>
 <div class="btns" style="margin-top:0"><button class="btn main" type="submit">Email me my report</button><button class="btn" type="button" id="rsave">Save report</button><button class="btn" type="button" id="rcopy">Copy report</button></div>
 </form>
 <p class="note" id="rmsg" aria-live="polite"></p>
+<p class="note">Safari and some other browsers may erase counts saved here if you don't visit this site for 7 days. Email or save your report to keep a copy.</p>
 </div>
 </div>
 
 <div class="call">
 <h3>When to call your provider</h3>
 <p>Call your provider or go to labor and delivery right away if it takes a lot longer than usual to feel 10 movements, if your baby is moving less, or if you feel a change in how your baby moves. Don't wait until the next day or your next appointment.</p>
-<p>Don't try to get the baby moving with cold water or sugary drinks first. Research has moved away from that idea, and it can cost time. Babies should keep moving all the way through the end of pregnancy and into labor. The kind of movement may change as they run out of room, but it shouldn't stop or slow way down.</p>
+<p>Don't try to get the baby moving with cold water or sugary drinks first. Research has moved away from that idea, and it can cost time (<a href="https://countthekicks.org/faq/">Count the Kicks FAQ</a>). Babies should keep moving all the way through the end of pregnancy and into labor. The kind of movement may change as they run out of room, but it shouldn't stop or slow way down.</p>
 </div>
 </div></section>
+</main>
 
 <footer class="band"><div class="wrap">
 <p><strong>Washington Stillbirth Prevention</strong> is run by Washington parents. Count the Kicks® belongs to Healthy Birth Day, Inc. This site isn't medical advice.</p>
-<p>Sources: Stillbirth Collaborative Research Network, JAMA (2011); Warrander et al., PLoS One (2012); ter Kuile et al., Journal of Perinatal Medicine (2021); Count the Kicks Iowa data (2019); Tveit et al., BMC Pregnancy and Childbirth (2009); Washington State Department of Health Vital Statistics Highlights; Washington SB 5501 bill reports (2023-24 session); Maternal and Child Health Stillbirth Prevention Act (2024).</p>
+<p><a href="es/" hreflang="es" lang="es">Esta página en español</a> · <a href="flyer.html">Printable flyer</a> · Contact: <a href="mailto:nichkt@gmail.com">nichkt@gmail.com</a></p>
+<h2>Sources</h2>
+<ul>
+<li>CDC, <a href="https://www.cdc.gov/stillbirth/data-research/index.html">Data and statistics on stillbirth</a></li>
+<li>Count the Kicks, <a href="https://countthekicks.org/2019/10/iowas-stillbirth-rate-all-time-low/">Iowa stillbirth rate reaches all-time low</a> (2019), and Healthy Birth Day, <a href="https://healthybirthday.org/our-work/count-the-kicks/">Count the Kicks</a></li>
+<li>Heazell, Holland and Wilkinson, <a href="https://doi.org/10.1111/1471-0528.17426">Information about fetal movements and stillbirth trends</a>, BJOG (2023)</li>
+<li>Tveit et al., <a href="https://doi.org/10.1186/1471-2393-9-32">Reduction of late stillbirth with the introduction of fetal movement information and guidelines</a>, BMC Pregnancy and Childbirth (2009)</li>
+<li>Saastad et al., <a href="https://doi.org/10.1111/j.1523-536X.2011.00508.x">Fetal movement counting: maternal concern and experiences</a>, Birth (2012)</li>
+<li>Washington State Department of Health, <a href="https://doh.wa.gov/data-and-statistical-reports/washington-tracking-network-wtn/fetal-and-infant-death-data/fetal-deaths">Fetal deaths</a></li>
+<li>Stillbirth Collaborative Research Network, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4562291/">Causes of death among stillbirths</a>, JAMA (2011)</li>
+<li>Ptacek et al., <a href="https://doi.org/10.1016/j.placenta.2014.05.011">Systematic review of placental pathology reported in association with stillbirth</a>, Placenta (2014)</li>
+<li>Warrander et al., <a href="https://doi.org/10.1371/journal.pone.0034851">Maternal perception of reduced fetal movements is associated with altered placental structure and function</a>, PLoS One (2012)</li>
+<li>ter Kuile, Erwich and Heazell, <a href="https://doi.org/10.1515/jpm-2021-0103">Stillbirths preceded by reduced fetal movements are more frequently associated with placental insufficiency</a>, Journal of Perinatal Medicine (2022)</li>
+<li>National Center for Health Statistics, <a href="https://www.cdc.gov/nchs/data/nvsr/nvsr75/nvsr75-06.pdf">National Vital Statistics Reports, vol. 75, no. 6</a> (2026)</li>
+<li>Washington State Legislature, <a href="https://app.leg.wa.gov/billsummary?BillNumber=5501&amp;Year=2023&amp;Initiative=false">SB 5501 (2023-24)</a> and its <a href="https://fnspublic.ofm.wa.gov/FNSPublicSearch/GetPDF?packageID=66594">fiscal note</a></li>
+<li>Washington Senate Democrats, <a href="https://senatedemocrats.wa.gov/wp-content/uploads/2026/11/StandingCommitteeMembership2027.pdf">2027 Senate committee membership</a></li>
+<li>Washington State Legislature, <a href="https://leg.wa.gov/media/zbwkvfyi/draft-2027-cutoff-calendar-draft.pdf">Draft 2027 cutoff calendar</a> and <a href="https://leg.wa.gov/bills-meetings-and-session/session/how-to-testify-at-a-committee-meeting/">How to testify</a></li>
+<li><a href="https://www.govinfo.gov/app/details/PLAW-118publ69">Maternal and Child Health Stillbirth Prevention Act of 2024</a> (Public Law 118-69)</li>
+<li>Washington State Department of Health, <a href="https://doh.wa.gov/public-health-provider-resources/public-health-system-resources-and-services/local-health-resources-and-tools/maternal-and-child-health-block-grant">Maternal and Child Health Block Grant</a></li>
+<li>Kansas Department of Health and Environment, <a href="https://www.kdhe.ks.gov/m/newsflash/home/detail/1304">KDHE partners with Count the Kicks</a> (2024)</li>
+<li>Count the Kicks, <a href="https://countthekicks.org/statistics/wa/">Washington</a>, <a href="https://countthekicks.org/about-us/partners/">Partners</a> and <a href="https://countthekicks.org/faq/">FAQ</a></li>
+</ul>
 </div></footer>
-
-<script>
-{
-const CONTACT = "nichkt@gmail.com";
-const times=[2,4,7,9,11,14,16,19,21,23];
-const days=[["Mon",21],["Tue",26],["Wed",19],["Thu",24],["Fri",22],["Sat",28],["Sun",23]];
-const causes=[["Obstetric complications",29.3],["Placental disease",23.6,1],["Genetic or structural",13.7],["Infection",12.9],["Umbilical cord",10.4],["High blood pressure",9.2],["Maternal medical",7.8]];
-document.getElementById('bars').innerHTML=causes.map(c=>`<div class="bar${c[2]?' hi':''}"><span>${c[0]}</span><span class="t"><i style="width:${c[1]/30*100}%"></i></span><span class="v">${c[1]}%</span></div>`).join('');
-document.getElementById('week').innerHTML=days.map((d,i)=>`<tr${i===days.length-1?' class="today"':''}><td>${d[0]}</td><td>8:0${[2,0,5,1,3,0,4][i]} pm</td><td>${d[1]} min</td></tr>`).join('');
-const wk=document.getElementById('wk');
-{const mx=33,avg=Math.round(days.reduce((a,d)=>a+d[1],0)/days.length),lo=avg-5,hi=avg+5;
-wk.innerHTML='<div class="rng" style="bottom:calc(22px + (100% - 22px) * '+(lo/mx)+');height:calc((100% - 22px) * '+((hi-lo)/mx)+')"></div>'+
-days.map((d,i)=>'<div class="col"><i style="height:'+(d[1]/mx*100)+'%"'+(i===days.length-1?' class="now"':'')+'><b>'+d[1]+'</b></i><span>'+d[0]+'</span></div>').join('');}
-
-document.getElementById('copy').addEventListener('click',async()=>{
-  const t=document.getElementById('letter').textContent;
-  const c=document.getElementById('copied');
-  try{await navigator.clipboard.writeText(t);c.textContent='Copied. Paste it into an email and edit it.';}
-  catch(e){c.textContent='Copy did not work here. Select the text above and copy it by hand.';}
-});
-
-const esc=v=>v.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
-const ROSTER=`1|Derek Stanford (D)|Davina Duerr (D)|Shelley Kloba (D)
-2|Jim McCune (R)|Andrew Barkis (R)|Matt Marshall (R)
-3|Marcus Riccelli (D)|Natasha Hill (D)|Timm Ormsby (D)
-4|Leonard Christian (R)|Suzanne Schmidt (R)|Rob Chase (R)
-5|Victoria Hunt (D)|Zach Hall (D)|Lisa Callan (D)
-6|Jeff Holy (R)|Mike Volz (R)|Jenny Graham (R)
-7|Shelly Short (R)|Andrew Engell (R)|Hunter Abell (R)
-8|Matt Boehnke (R)|Stephanie Barnard (R)|April Connors (R)
-9|Mark Schoesler (R)|Mary Dye (R)|Joe Schmick (R)
-10|Ron Muzzall (R)|Clyde Shavers (D)|Dave Paul (D)
-11|Bob Hasegawa (D)|David Hackney (D)|Steve Bergquist (D)
-12|Keith Goehner (R)|Brian Burnett (R)|Mike Steele (R)
-13|Judy Warnick (R)|Tom Dent (R)|Alex Ybarra (R)
-14|Curtis King (R)|Gloria Mendoza (R)|Deb Manjarrez (R)
-15|Nikki Torres (R)|Chris Corry (R)|Jeremie Dufault (R)
-16|Perry Dozier (R)|Mark Klicker (R)|Skyler Rude (R)
-17|Paul Harris (R)|Kevin Waters (R)|David Stuebe (R)
-18|Adrian Cortes (D)|Stephanie McClintock (R)|John Ley (R)
-19|Jeff Wilson (R)|Jim Walsh (R)|Joel McEntire (R)
-20|John Braun (R)|Peter Abbarno (R)|Ed Orcutt (R)
-21|Marko Liias (D)|Strom Peterson (D)|Lillian Ortiz-Self (D)
-22|Jessica Bateman (D)|Beth Doglio (D)|Lisa Parshley (D)
-23|Drew Hansen (D)|Tarra Simmons (D)|Greg Nance (D)
-24|Mike Chapman (D)|Adam Bernbaum (D)|Steve Tharinger (D)
-25|Chris Gildon (R)|Michael Keaton (R)|Cyndy Jacobsen (R)
-26|Deborah Krishnadasan (D)|Adison Richards (D)|Michelle Caldier (R)
-27|Yasmin Trudeau (D)|Laurie Jinkins (D)|Jake Fey (D)
-28|T'wina Nobles (D)|Mari Leavitt (D)|Dan Bronoske (D)
-29|Steve Conway (D)|Melanie Morgan (D)|Sharlett Mena (D)
-30|Claire Wilson (D)|Jamila Taylor (D)|Kristine Reeves (D)
-31|Phil Fortunato (R)|Drew Stokesbary (R)|Josh Penner (R)
-32|Jesse Salomon (D)|Cindy Ryu (D)|Lauren Davis (D)
-33|Tina Orwall (D)|Edwin Obras (D)|Mia Gregerson (D)
-34|Emily Alvarado (D)|Brianna Thomas (D)|Joe Fitzgibbon (D)
-35|Drew MacEwen (R)|Dan Griffey (R)|Travis Couture (R)
-36|Noel Frame (D)|Julia Reed (D)|Liz Berry (D)
-37|Rebecca Saldaña (D)|Sharon Tomiko Santos (D)|Chipalo Street (D)
-38|June Robinson (D)|Julio Cortes (D)|Mary Fosse (D)
-39|Keith Wagoner (R)|Sam Low (R)|Carolyn Eslick (R)
-40|Liz Lovelett (D)|Debra Lekanoff (D)|Alex Ramel (D)
-41|Lisa Wellman (D)|Janice Zahn (D)|My-Linh Thai (D)
-42|Sharon Shewmake (D)|Alicia Rule (D)|Joe Timmons (D)
-43|Jamie Pedersen (D)|Nicole Macri (D)|Shaun Scott (D)
-44|John Lovick (D)|Brandy Donaghy (D)|April Berg (D)
-45|Manka Dhingra (D)|Roger Goodman (D)|Larry Springer (D)
-46|Javier Valdez (D)|Gerry Pollet (D)|Darya Farivar (D)
-47|Claudia Kauffman (D)|Debra Entenman (D)|Chris Stearns (D)
-48|Vandana Slatter (D)|Osman Salahuddin (D)|Amy Walen (D)
-49|Annette Cleveland (D)|Sharon Wylie (D)|Monica Stonier (D)`.split("\n").reduce((m,l)=>{const [d,s,a,b]=l.split("|");m[d]={s,a,b};return m},{});
-const lres=document.getElementById('lres');
-const showErr=msg=>{lres.innerHTML='<p class="lerr">'+esc(msg)+'</p>';};
-document.getElementById('lform').addEventListener('submit',e=>{
-  e.preventDefault();
-  const addr=document.getElementById('addr').value.trim();
-  if(!addr)return;
-  lres.innerHTML='<p class="note">Looking up your district...</p>';
-  const cb='cgeo'+Date.now();
-  const sc=document.createElement('script');
-  const done=()=>{clearTimeout(t);try{delete window[cb]}catch(x){window[cb]=undefined}sc.remove();};
-  const t=setTimeout(()=>{done();showErr("We couldn't reach the address lookup right now. Check the address and try again in a minute.");},12000);
-  window[cb]=data=>{
-    done();
-    const m=data&&data.result&&data.result.addressMatches||[];
-    if(!m.length){showErr("We couldn't find that address. Try adding the city and ZIP code.");return;}
-    const g=m[0].geographies||{};
-    const st=(g.States&&g.States[0]&&g.States[0].STUSAB)||'';
-    if(st&&st!=='WA'){showErr('That address is outside Washington State.');return;}
-    const k=Object.keys(g).find(x=>/Legislative Districts - Upper/i.test(x));
-    const rec=k&&g[k][0];
-    const d=rec?String(parseInt(rec.BASENAME||rec.SLDU||'',10)):'';
-    const r=ROSTER[d];
-    if(!r){showErr("We found the address but not its legislative district. Try a full street address.");return;}
-    lres.innerHTML='<div class="leg"><div><b>Legislative District '+esc(d)+'</b></div>'+
-      '<div><b>'+esc(r.s)+'</b><span>State Senator</span></div>'+
-      '<div><b>'+esc(r.a)+'</b><span>State Representative, Position 1</span></div>'+
-      '<div><b>'+esc(r.b)+'</b><span>State Representative, Position 2</span></div></div>'+
-      '<div class="btns"><button class="btn" type="button" id="fill">Put these names in the letter</button></div>';
-    const strip=n=>n.replace(/\s*\([DR]\)$/,'');
-    document.getElementById('fill').addEventListener('click',()=>{
-      const L=document.getElementById('letter');
-      L.textContent=L.textContent.replace(/^Dear [^\n]*/,'Dear Senator '+strip(r.s)+', Representative '+strip(r.a)+' and Representative '+strip(r.b)+',').replace('I live in ____ in your district','I live in your district, the '+d+suffix(d)+' Legislative District');
-      document.getElementById('letter').scrollIntoView({behavior:'smooth',block:'center'});
-    });
-  };
-  const q=new URLSearchParams({address:addr,benchmark:'Public_AR_Current',vintage:'Current_Current',layers:'all',format:'jsonp',callback:cb});
-  sc.src='https://geocoding.geo.census.gov/geocoder/geographies/onelineaddress?'+q.toString();
-  sc.onerror=()=>{done();showErr("We couldn't reach the address lookup right now. Try again in a minute.");};
-  document.body.appendChild(sc);
-});
-const suffix=n=>{const v=n%100;if(v>=11&&v<=13)return'th';return({1:'st',2:'nd',3:'rd'})[n%10]||'th';};
-
-const cn=document.getElementById('cn'),ct=document.getElementById('ct'),tap=document.getElementById('ctap'),hist=document.getElementById('chist'),cavg=document.getElementById('cavg');
-let n=0,t0=0,tick=0,log=[];
-try{log=JSON.parse(localStorage.getItem('wsp-kicks')||'[]')}catch(x){log=[]}
-const fmt=ms=>{const m=Math.floor(ms/60000),sec=Math.floor(ms%60000/1000);return m+' min '+String(sec).padStart(2,'0')+' sec'};
-const renderHist=()=>{
-  if(!log.length){hist.innerHTML='<li><span>No counts saved yet</span></li>';cavg.textContent='';return}
-  hist.innerHTML=log.slice(-7).reverse().map(r=>'<li><span>'+esc(r.d)+'</span><span>'+esc(String(r.m))+' min</span></li>').join('');
-  const last=log.slice(-7),avg=Math.round(last.reduce((a,r)=>a+r.m,0)/last.length);
-  cavg.textContent=last.length>=3?'Your usual time lately: about '+avg+' minutes.':'Count for a few more days to see your baby\'s pattern.';
-};
-renderHist();
-document.getElementById('cstart').addEventListener('click',()=>{
-  n=0;t0=Date.now();cn.textContent='0';tap.disabled=false;tap.focus();
-  clearInterval(tick);tick=setInterval(()=>{ct.textContent='Counting: '+fmt(Date.now()-t0)},1000);ct.textContent='Counting: 0 min 00 sec';
-});
-tap.addEventListener('click',()=>{
-  if(!t0)return;n++;cn.textContent=String(n);
-  if(n>=10){
-    clearInterval(tick);tap.disabled=true;const ms=Date.now()-t0;t0=0;
-    ct.textContent='10 movements in '+fmt(ms)+'.';
-    const now=new Date();log.push({d:now.toLocaleDateString(undefined,{weekday:'short',month:'short',day:'numeric'}),m:Math.max(1,Math.round(ms/60000))});
-    log=log.slice(-30);try{localStorage.setItem('wsp-kicks',JSON.stringify(log))}catch(x){}
-    renderHist();
-  }
-});
-document.getElementById('creset').addEventListener('click',()=>{
-  clearInterval(tick);n=0;t0=0;cn.textContent='0';tap.disabled=true;ct.textContent='Not started';
-});
-
-const report=()=>{
-  if(!log.length)return '';
-  const last=log.slice(-7),avg=Math.round(last.reduce((a,r)=>a+r.m,0)/last.length);
-  return 'My kick counts\n\n'+log.map(r=>r.d+': '+r.m+' min to 10 movements').join('\n')+
-  '\n\nUsual time lately: about '+avg+' minutes'+
-  '\n\nCall your provider or go to labor and delivery right away if it takes a lot longer than usual to feel 10 movements, or if your baby is moving less.'+
-  '\n\nFrom Washington Stillbirth Prevention';
-};
-const rmsg=document.getElementById('rmsg');
-document.getElementById('rform').addEventListener('submit',e=>{
-  e.preventDefault();
-  const r=report();
-  if(!r){rmsg.textContent='Finish at least one count first, then you can email your report.';return}
-  const to=document.getElementById('remail').value.trim();
-  const href='mailto:'+encodeURIComponent(to)+'?subject='+encodeURIComponent('My kick count report')+'&body='+encodeURIComponent(r);
-  rmsg.innerHTML='Your report is ready. <a href="'+esc(href)+'">Open it in your email app</a> and press send. If that link doesn\'t open anything, use Copy report and paste it into an email to yourself.';
-  window.location.href=href;
-});
-document.getElementById('rsave').addEventListener('click',()=>{
-  const r=report();
-  if(!r){rmsg.textContent='Finish at least one count first.';return}
-  try{
-    const url=URL.createObjectURL(new Blob([r],{type:'text/plain'}));
-    const a=document.createElement('a');a.href=url;a.download='kick-count-report-'+new Date().toISOString().slice(0,10)+'.txt';
-    document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
-    rmsg.textContent='Saved. Look for kick-count-report in your downloads.';
-  }catch(x){rmsg.textContent='Saving did not work here. Try Copy report instead.'}
-});
-document.getElementById('rcopy').addEventListener('click',async()=>{
-  const r=report();
-  if(!r){rmsg.textContent='Finish at least one count first.';return}
-  try{await navigator.clipboard.writeText(r);rmsg.textContent='Copied. Paste it into an email or your notes.'}
-  catch(x){rmsg.textContent='Copy did not work here. Try the email button instead.'}
-});
-document.getElementById('sform').addEventListener('submit',e=>{
-  e.preventDefault();
-  const v=id=>document.getElementById(id).value.trim();
-  const body=`Name: ${v('nm')}\nTown: ${v('town')}\nEmail: ${v('em')}\n\n${v('msg')}`;
-  const href=`mailto:${CONTACT}?subject=${encodeURIComponent('My story for Washington Stillbirth Prevention')}&body=${encodeURIComponent(body)}`;
-  const o=document.getElementById('out');
-  o.innerHTML=`Your story is ready. <a href="${esc(href)}">Open it in your email app</a>, or send it yourself to <strong>${esc(CONTACT)}</strong>. Nothing has been sent yet.`;
-  o.classList.add('on');
-});
-}
-</script>
 </body>
 </html>
