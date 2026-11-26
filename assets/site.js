@@ -389,7 +389,8 @@ if (tap) {
       const url = URL.createObjectURL(new Blob([r], {type: 'text/plain;charset=utf-8'}));
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'kick-count-report-' + new Date().toISOString().slice(0, 10) + '.txt';
+      const n = new Date();
+      a.download = 'kick-count-report-' + n.getFullYear() + '-' + String(n.getMonth() + 1).padStart(2, '0') + '-' + String(n.getDate()).padStart(2, '0') + '.txt';
       document.body.appendChild(a);
       a.click();
       a.remove();
